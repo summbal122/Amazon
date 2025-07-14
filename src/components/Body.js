@@ -1,0 +1,22 @@
+import data from "../data"
+
+const Body = () => {
+  return (
+    <div >
+      <ul className='bg-navy-light text-sm text-white flex gap-1 font-semibold px-5'>
+        <li className='border border-transparent hover:border-white hover:cursor-pointer p-2'> <i className="fa-solid fa-bars mr-1 text-lg"></i>All</li>
+       {data.map((value, i) => (
+       <li 
+       key={i}
+       className="border border-transparent hover:border-white hover:cursor-pointer p-2" >
+       {value}
+       </li>
+       ))}
+        
+ 
+      </ul>
+    </div>
+  )
+}
+
+export default Body

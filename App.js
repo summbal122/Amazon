@@ -1,8 +1,10 @@
-
+import Header from "./src/components/Header"
+import Body from "./src/components/Body"
 const App = () => {
   return (
     <div>
-    <h1>hi</h1>
+     <Header/>
+     <Body/>
       
     </div>
   )
