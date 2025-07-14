@@ -1,5 +1,5 @@
-import data from "../data"
-
+import {data} from "../data"
+import MainSection from "./MainSection"
 const Body = () => {
   return (
     <div >
@@ -12,9 +12,9 @@ const Body = () => {
        {value}
        </li>
        ))}
-        
- 
       </ul>
+      <MainSection/>
+      
     </div>
   )
 }
