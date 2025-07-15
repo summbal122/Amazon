@@ -1,12 +1,18 @@
 import {IMG_URL , IMG_URL_TWO, IMG_URL_STORE} from "../utils/constants";
+import { Link } from "react-router";
 const CatogeriesSection = () => {
   return (
     <div className="grid grid-cols-4 gap-4 px-4 ">
+
+      {/* Gaming */}
+      <Link to="/products"> 
       <div className="bg-white px-5 py-3 h-90">
         <h1 className="font-bold text-xl mb-2">Get your game on</h1>
         <img className="mb-4" alt="" src={IMG_URL_TWO+ "Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg" } />
-        <a className="text-xs text-blue-600">Shop gaming</a>
+        <span className="text-xs text-blue-600">Shop gaming</span>
       </div>
+      </Link>
+      
 
        <div className="bg-white px-5 py-3 h-90">
         <h1 className="font-bold text-xl mb-2">Shop for your home essentials</h1> 

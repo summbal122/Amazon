@@ -1,5 +1,6 @@
 import {data} from "../data"
 import MainSection from "./MainSection"
+import { Outlet } from "react-router"
 const Body = () => {
   return (
     <div >
@@ -13,7 +14,7 @@ const Body = () => {
        </li>
        ))}
       </ul>
-      <MainSection/>
+      <Outlet/>
       
     </div>
   )

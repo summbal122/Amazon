@@ -1,9 +1,14 @@
-
+import { Link } from "react-router"
 const Header = () => {
   return (
     <div className="bg-navy-blue w-full grid grid-cols-12 text-white py-2 px-5 font-medium gap-4 text-xs">
-     <div className="flex items-center justify-center gap-4 col-span-2 ">
-      <img className="w-22 border border-transparent hover:border-white hover:cursor-pointer p-2" alt="Amazon logo" src="https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png"/>
+      
+     <div className="flex items-center justify-center gap-4 col-span-2">
+      <Link to="/">
+      <img className="w-22 border border-transparent hover:border-white hover:cursor-pointer p-2" 
+      alt="Amazon logo" 
+      src="https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png"/></Link>
+      
       <div className="flex items-center gap-2 text-sm border border-transparent hover:border-white hover:cursor-pointer p-2">
       <i className="fa-solid fa-location-dot text-lg"></i>
       <div>
