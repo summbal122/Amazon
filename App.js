@@ -4,11 +4,16 @@ import {createBrowserRouter} from "react-router"
 import { RouterProvider } from "react-router"
 import ProductsPage from "./src/components/ProductsPage"
 import MainSection from "./src/components/MainSection"
+import Footer from "./src/components/Footer"
+import CatogeriesSection from "./src/components/CatogeriesSection"
 const AppLayout = () => {
   return ( 
     <>
     <Header/>
     <Body/>
+    <CatogeriesSection/>
+    <Footer/>
+    
     </>
   )
 };
@@ -23,8 +28,8 @@ const appRouter = createBrowserRouter ([
         element: <MainSection />,
       },
       {
-        path: "/products",
-        element: <ProductsPage/>
+        path: "/products/category/:categoryName",
+        element: <ProductsPage />
       }
     ]
   }

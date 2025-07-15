@@ -2,19 +2,20 @@ import {IMG_URL , IMG_URL_TWO, IMG_URL_STORE} from "../utils/constants";
 import { Link } from "react-router";
 const CatogeriesSection = () => {
   return (
-    <div className="grid grid-cols-4 gap-4 px-4 ">
+    <div className="grid grid-cols-4 gap-4 px-4 pb-10 -mt-70 z-40 sticky bg-gray-200 ">
 
       {/* Gaming */}
-      <Link to="/products"> 
-      <div className="bg-white px-5 py-3 h-90">
+      <Link to="/products/category/devices"> 
+      <div className="bg-white px-5 py-3 h-100">
         <h1 className="font-bold text-xl mb-2">Get your game on</h1>
         <img className="mb-4" alt="" src={IMG_URL_TWO+ "Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg" } />
         <span className="text-xs text-blue-600">Shop gaming</span>
       </div>
       </Link>
       
-
-       <div className="bg-white px-5 py-3 h-90">
+      {/* home */}
+       <Link to="/products/category/home"> 
+       <div className="bg-white px-5 py-3 h-100">
         <h1 className="font-bold text-xl mb-2">Shop for your home essentials</h1> 
         <div className="grid grid-cols-2 gap-4">
 
@@ -39,10 +40,13 @@ const CatogeriesSection = () => {
           </div>
         
         </div>
-        <a className="text-xs text-blue-600">Shop gaming</a>
+        <span className="text-xs text-blue-600">Shop gaming</span>
       </div>
+      </Link>
 
-       <div className="bg-white px-5 py-3 h-90">
+       {/* Groceries */}
+       <Link to="/products/category/groceries">
+          <div className="bg-white px-5 py-3 h-100">
         <h1 className="font-bold text-xl mb-2">Top categories in Kitchen appliances</h1>
           <div>
             <img alt="" src={IMG_URL + "313wAT6Iy2L._SY320_.jpg"} />
@@ -66,10 +70,14 @@ const CatogeriesSection = () => {
           </div>
 
         </div>
-        <a className="text-xs text-blue-600">Shop gaming</a>
+        <span className="text-xs text-blue-600">Shop gaming</span>
       </div>
-
-       <div className="bg-white px-5 py-3 h-90">
+       
+       </Link>
+    
+       {/* fashion */}
+       <Link to="/products/category/fashion">
+       <div className="bg-white px-5 py-3 h-100">
         <h1 className="font-bold text-xl mb-2">Fashion trends you like</h1>
         <div className="grid grid-cols-2 gap-2"> 
           <div>
@@ -90,104 +98,101 @@ const CatogeriesSection = () => {
           </div>
          
           </div>
-        <a className="text-xs text-blue-600">Shop gaming</a>
+        <span className="text-xs text-blue-600">Shop gaming</span>
       </div>
+      </Link>
 
-         <div className="bg-white px-5 py-3 h-90">
+    {/* Watches */}
+     <Link to="/products/category/watches">
+       <div className="bg-white px-5 py-3 h-100">
         <h1 className="font-bold text-xl mb-2">Fashion trends you like</h1>
         <div className="grid grid-cols-2 gap-2"> 
           <div>
-             <img className="" alt="" src={IMG_URL_STORE + "_2_x2._SY232_CB595261253_.jpg" }/>
+             <img className="" alt="" src={IMG_URL_TWO + "BAU2024Aug/WomenWatches_2x._SY232_CB564394432_.jpg" }/>
              <span className="text-xs">Dresses</span>
           </div>
           <div>
-             <img className="" alt="" src={IMG_URL_STORE + "_3_x2._SY232_CB595261253_.jpg" }/>
+             <img className="" alt="" src={IMG_URL_TWO + "BAU2024Aug/MenWatches_2x._SY232_CB564394432_.jpg" }/>
               <span className="text-xs">Knits</span>
           </div>
           <div>
-            <img className="" alt="" src={IMG_URL_STORE + "_1_x2._SY232_CB595261253_.jpg" }/>
+            <img className="" alt="" src={IMG_URL_TWO + "BAU2024Aug/GirlWatches_2x._SY232_CB564394432_.jpg" }/>
             <span className="text-xs">Jackets</span>
           </div>
           <div>
-            <img className="" alt="" src={IMG_URL_STORE + "_4_x2._SY232_CB595261253_.jpg" }/>
+            <img className="" alt="" src={IMG_URL_TWO + "/BAU2024Aug/BoyWatches_2x._SY232_CB564394432_.jpg" }/>
             <span className="text-xs">Jewlery</span>
           </div>
          
           </div>
-        <a className="text-xs text-blue-600">Shop gaming</a>
+        <span className="text-xs text-blue-600">Shop gaming</span>
       </div>
+      </Link>
 
-         <div className="bg-white px-5 py-3 h-90">
-        <h1 className="font-bold text-xl mb-2">Fashion trends you like</h1>
-        <div className="grid grid-cols-2 gap-2"> 
+    {/* Beauty */}
+       <Link to="/products/category/beauty">
+          <div className="bg-white px-5 py-3 h-100">
+        <h1 className="font-bold text-xl mb-2">Top categories in Kitchen appliances</h1>
           <div>
-             <img className="" alt="" src={IMG_URL_STORE + "_2_x2._SY232_CB595261253_.jpg" }/>
-             <span className="text-xs">Dresses</span>
+            <img alt="" src={IMG_URL_TWO + "DskBTFQuadCards/Fuji_BTF_Quad_Cards_2x_Make-up._SY232_CB558654384_.jpg"} />
+            <span className="text-xs">Cooker</span>
           </div>
+       
+        <div className="grid grid-cols-3 gap-2">
           <div>
-             <img className="" alt="" src={IMG_URL_STORE + "_3_x2._SY232_CB595261253_.jpg" }/>
-              <span className="text-xs">Knits</span>
+            <img alt="" src={IMG_URL_TWO + "DskBTFQuadCards/Fuji_BTF_Quad_Cards_2x_Brushes._SY232_CB558654384_.jpg" }/>
+            <span className="text-xs">Coffee</span>
           </div>
-          <div>
-            <img className="" alt="" src={IMG_URL_STORE + "_1_x2._SY232_CB595261253_.jpg" }/>
-            <span className="text-xs">Jackets</span>
-          </div>
-          <div>
-            <img className="" alt="" src={IMG_URL_STORE + "_4_x2._SY232_CB595261253_.jpg" }/>
-            <span className="text-xs">Jewlery</span>
-          </div>
-         
-          </div>
-        <a className="text-xs text-blue-600">Shop gaming</a>
-      </div>
 
-         <div className="bg-white px-5 py-3 h-90">
-        <h1 className="font-bold text-xl mb-2">Fashion trends you like</h1>
-        <div className="grid grid-cols-2 gap-2"> 
-          <div>
-             <img className="" alt="" src={IMG_URL_STORE + "_2_x2._SY232_CB595261253_.jpg" }/>
-             <span className="text-xs">Dresses</span>
+           <div>
+           <img  alt="" src={IMG_URL_TWO + "DskBTFQuadCards/Fuji_BTF_Quad_Cards_2x_Sponges._SY232_CB558654384_.jpg" }/>
+            <span className="text-xs">Pots and Pans</span>
           </div>
-          <div>
-             <img className="" alt="" src={IMG_URL_STORE + "_3_x2._SY232_CB595261253_.jpg" }/>
-              <span className="text-xs">Knits</span>
-          </div>
-          <div>
-            <img className="" alt="" src={IMG_URL_STORE + "_1_x2._SY232_CB595261253_.jpg" }/>
-            <span className="text-xs">Jackets</span>
-          </div>
-          <div>
-            <img className="" alt="" src={IMG_URL_STORE + "_4_x2._SY232_CB595261253_.jpg" }/>
-            <span className="text-xs">Jewlery</span>
-          </div>
-         
-          </div>
-        <a className="text-xs text-blue-600">Shop gaming</a>
-      </div>
 
-         <div className="bg-white px-5 py-3 h-90">
-        <h1 className="font-bold text-xl mb-2">Fashion trends you like</h1>
-        <div className="grid grid-cols-2 gap-2"> 
-          <div>
-             <img className="" alt="" src={IMG_URL_STORE + "_2_x2._SY232_CB595261253_.jpg" }/>
-             <span className="text-xs">Dresses</span>
+           <div>
+            <img alt="" src={IMG_URL_TWO + "DskBTFQuadCards/Fuji_BTF_Quad_Cards_2x_Mirrors._SY232_CB558654384_.jpg"} />
+            <span className="text-xs">Kettles</span>
           </div>
-          <div>
-             <img className="" alt="" src={IMG_URL_STORE + "_3_x2._SY232_CB595261253_.jpg" }/>
-              <span className="text-xs">Knits</span>
-          </div>
-          <div>
-            <img className="" alt="" src={IMG_URL_STORE + "_1_x2._SY232_CB595261253_.jpg" }/>
-            <span className="text-xs">Jackets</span>
-          </div>
-          <div>
-            <img className="" alt="" src={IMG_URL_STORE + "_4_x2._SY232_CB595261253_.jpg" }/>
-            <span className="text-xs">Jewlery</span>
-          </div>
-         
-          </div>
-        <a className="text-xs text-blue-600">Shop gaming</a>
+
+        </div>
+        <span className="text-xs text-blue-600">Shop gaming</span>
       </div>
+       </Link>
+
+   {/* Bags */}
+       <Link to="/products/category/bags">
+          <div className="bg-white px-5 py-3 h-100">
+        <h1 className="font-bold text-xl mb-2">Top categories in Kitchen appliances</h1>
+          <div>
+            <img alt="" src={IMG_URL_TWO + "BAU2024Aug/Backpack_2x._SY232_CB566100767_.jpg"} />
+            <span className="text-xs">Cooker</span>
+          </div>
+       
+        <div className="grid grid-cols-3 gap-2">
+          <div>
+            <img alt="" src={IMG_URL_TWO + "BAU2024Aug/TravelBag_2x._SY232_CB566100767_.jpg" }/>
+            <span className="text-xs">Coffee</span>
+          </div>
+
+           <div>
+           <img  alt="" src={IMG_URL_TWO + "BAU2024Aug/Accessories_2x._SY232_CB566100767_.jpg" }/>
+            <span className="text-xs">Pots and Pans</span>
+          </div>
+
+           <div>
+            <img alt="" src={IMG_URL_TWO + "BAU2024Aug/Handbags_2x._SY232_CB566100767_.jpg"} />
+            <span className="text-xs">Kettles</span>
+          </div>
+
+        </div>
+        <span className="text-xs text-blue-600">Shop gaming</span>
+      </div>
+       </Link>
+
+
+   
+
+    
 
       
     </div>
