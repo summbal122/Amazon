@@ -2,6 +2,7 @@ import { images , chevron} from "../data";
 import { useState, useEffect } from "react";
 import CatogeriesSection from "./CatogeriesSection";
 import { useState} from "react";
+import BestSellersSection from "./BestSellersSection";
 const MainSection = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,7 +22,7 @@ const MainSection = () => {
       fetchProducts();
      }, [])
   return (
-    <div>
+    <div >
     <div className="relative h-screen w-screen">
        <div className="relative w-full">
   <div
@@ -48,8 +49,11 @@ const MainSection = () => {
      
      
     </div>
-
-    <CatogeriesSection/>
+     <div className="px-10 space-y-8">
+      <CatogeriesSection/>
+     <BestSellersSection/>
+     </div>
+   
 
     </div>
   );

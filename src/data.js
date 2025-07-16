@@ -104,3 +104,14 @@ export const amazonFooterLinks = [
   { title: "PillPack", description: "Pharmacy Simplified" }
 ];
 export const copyrightText = "© 2025, Built by Sumbal Ijaz — Practice Clone for Learning Only.";
+export const BEST_SELLERS = {
+  Toys : {
+  title: "Top Sellers in Toys for you",
+  id: [
+  "81Aci4Nmt-", "81tsThAA6Y", "8160QjpuoO" , "81Z6ZExj3G", "819z6oTD4x" ,"61J9KtzsCd", "81P+RdL1lj", "71-RnCq9eb", "71c7+NH3f0", "71TXgfQNxq", "71NApdRSsm", "8162NLQnNy"]
+ },
+ Clothing : {
+  title: "Best Sellers in Clothing, Shoes & Jewelry",
+  id: ["710o0VupSc",  "81+oQBvBR-", "71SRrNMlH0", "81suZ76XHp", "711w31jqoC" , "51lcacCccH", "81fMPn0xnU", "415CbGNRGr", "81fMPn0xnU", "81JcCMoz5B" ,"81suZ76XHp",]
+ }
+} 
