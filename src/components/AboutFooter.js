@@ -1,10 +1,16 @@
 import { footerSections, footerButtons } from "../data";
 import FooterButton from "./FooterButton";
+import { Link as ScrollLink } from "react-scroll"
 const AboutFooter = () => {
   return (
     <div className=" bg-navy-light text-white">
     <div className="w-full grid  place-items-center pb-10">
-      <div className="bg-navy-lighter w-full text-center py-4 text-xs hover:bg-white/30 mb-8 hover:cursor-pointer">Back to top</div>
+        <div className="bg-navy-lighter w-full text-center py-4 text-xs hover:bg-white/30 mb-8 hover:cursor-pointer">
+        <ScrollLink smooth={true} duration={1000} to="top-section">
+        Back to top
+        </ScrollLink>
+      </div>
+
       <div className="grid grid-cols-4 gap-12 w-9/12 mb-10">
         {footerSections.map((section, index) => (
           <div key={index}>

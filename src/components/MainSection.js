@@ -22,13 +22,12 @@ const MainSection = () => {
       fetchProducts();
      }, [])
   return (
-    <div >
-    <div className="relative h-screen w-screen">
-       <div className="relative w-full">
-  <div
+    <div>
+    <div  className="relative h-screen w-screen">
+     <div className="relative w-full">
+    <div
     className="relative w-full h-screen bg-cover bg-no-repeat bg-center"
-    style={{ backgroundImage: `url(${images[currentIndex]})` }}
-  >
+    style={{ backgroundImage: `url(${images[currentIndex]})` }}>
     {/* Gradient Overlay */}
     <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-white to-transparent" />
 
@@ -49,7 +48,7 @@ const MainSection = () => {
      
      
     </div>
-     <div className="px-10 space-y-8">
+     <div className="px-10 space-y-8 ">
       <CatogeriesSection/>
      <BestSellersSection/>
      </div>

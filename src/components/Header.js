@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 const Header = () => {
   return (
-    <div className="bg-navy-blue w-full grid grid-cols-12 text-white py-2 px-5 font-medium gap-4 text-xs">
+    <div id="top-section" className="bg-navy-blue w-full grid grid-cols-12 text-white py-2 px-5 font-medium gap-4 text-xs">
       
      <div className="flex items-center justify-center gap-4 col-span-2">
       <Link to="/">
@@ -20,10 +20,10 @@ const Header = () => {
      </div>
      
      {/* Search Section */}
-     <form className="col-span-7 flex">
-      <button className="bg-gray-light text-gray-600 p-2 rounded-l-md">All <i className="ml-1 fa-solid fa-caret-down text-xs"></i></button>
-      <input className="flex-1 bg-white text-gray-950 p-2 text-[13px]" placeholder="Search Amazon"></input>
-      <button className="bg-dark-orange rounded-r-md"><i className="fa-solid fa-magnifying-glass text-navy-blue p-3 text-lg"></i></button>
+     <form className="col-span-7 flex items-center">
+      <button className="bg-gray-light text-gray-600 p-3 border-1 border-gray-light rounded-l-md">All <i className="ml-1 fa-solid fa-caret-down text-xs hover:cursor-pointer"></i></button>
+      <input className="flex-1 bg-white text-gray-950 p-3 text-[13px] outline-dark-orange " placeholder="Search Amazon"></input>
+      <button className="bg-dark-orange rounded-r-md hover:cursor-pointer"><i className="fa-solid fa-magnifying-glass text-navy-blue p-3 text-lg"></i></button>
      </form>
 
      <div className="col-span-3 flex justify-between items-center">

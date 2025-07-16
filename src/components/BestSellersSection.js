@@ -3,7 +3,7 @@ import { BEST_SELLERS } from "../data"
 
 const BestSellersSection = () => {
   return (
-    <div className="w-full space-y-5 ">
+    <div className="w-full space-y-5 pb-15">
       <div className="flex flex-col gap-8"> 
       {Object.values(BEST_SELLERS).map((category, index) => (
         <div className="bg-white p-6" key={index}>
