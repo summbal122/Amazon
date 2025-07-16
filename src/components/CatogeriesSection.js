@@ -2,7 +2,7 @@ import {IMG_URL , IMG_URL_TWO, IMG_URL_STORE} from "../utils/constants";
 import { Link } from "react-router";
 const CatogeriesSection = () => {
   return (
-    <div className="grid grid-cols-4 gap-4 px-4 pb-10 -mt-70 z-40 sticky bg-gray-200 ">
+    <div className="grid grid-cols-4 gap-4 px-4 pb-10 -mt-90 z-40 sticky bg-gray-200 ">
 
       {/* Gaming */}
       <Link to="/products/category/devices"> 

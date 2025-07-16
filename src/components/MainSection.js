@@ -21,10 +21,11 @@ const MainSection = () => {
       fetchProducts();
      }, [])
   return (
+    <div>
     <div className="relative h-screen w-screen">
        <div className="relative w-full">
   <div
-    className="relative w-full h-[500px] bg-cover bg-no-repeat bg-center"
+    className="relative w-full h-screen bg-cover bg-no-repeat bg-center"
     style={{ backgroundImage: `url(${images[currentIndex]})` }}
   >
     {/* Gradient Overlay */}
@@ -33,12 +34,12 @@ const MainSection = () => {
     <img
       onClick={handlePreviousImg}
       src={chevron[0]}
-      className="w-20 absolute left-5 top-1/2 transform -translate-y-1/2 hover:cursor-pointer"
+      className="w-20 absolute left-5 top-24 hover:cursor-pointer"
     />
     <img
       onClick={handleNextImg}
       src={chevron[1]}
-      className="w-20 absolute right-5 top-1/2 transform -translate-y-1/2 cursor-pointer"
+      className="w-20 absolute right-5 top-24 cursor-pointer"
     />
   </div>
 
@@ -46,6 +47,10 @@ const MainSection = () => {
       
      
      
+    </div>
+
+    <CatogeriesSection/>
+
     </div>
   );
 };

@@ -11,7 +11,6 @@ const AppLayout = () => {
     <>
     <Header/>
     <Body/>
-    <CatogeriesSection/>
     <Footer/>
     
     </>

@@ -1,6 +1,7 @@
 import {data} from "../data"
 import MainSection from "./MainSection"
 import { Outlet } from "react-router"
+import CatogeriesSection from "./CatogeriesSection"
 const Body = () => {
   return (
     <div className="bg-gray-200" >
@@ -14,7 +15,6 @@ const Body = () => {
        </li>
        ))}
       </ul>
-      
       <Outlet/>
       
     </div>
