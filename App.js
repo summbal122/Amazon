@@ -7,6 +7,7 @@ import MainSection from "./src/components/MainSection"
 import Footer from "./src/components/Footer"
 import { Provider } from "react-redux"
 import appStore from "./src/utils/appStore"
+import Cart from "./src/components/Cart"
 const AppLayout = () => {
   return ( 
     <>
@@ -29,6 +30,10 @@ const appRouter = createBrowserRouter ([
       {
         path: "/products/category/:categoryName",
         element: <ProductsPage />
+      }, 
+      {
+      path: "/cart", 
+      element: <Cart/>
       }
     ]
   }

@@ -1,8 +1,11 @@
 import { Link } from "react-router"
+import { useSelector } from "react-redux"
 const Header = () => {
+  const cartItems = useSelector((store) => store.cart.cartItems);
+   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   return (
     <div id="top-section" className="bg-navy-blue w-full grid grid-cols-12 text-white py-2 px-5 font-medium gap-4 text-xs">
-      
+      {/* left section */}
      <div className="flex items-center justify-center gap-4 col-span-2">
       <Link to="/">
       <img className="w-22 border border-transparent hover:border-white hover:cursor-pointer p-2" 
@@ -25,7 +28,8 @@ const Header = () => {
       <input className="flex-1 bg-white text-gray-950 p-3 text-[13px] outline-dark-orange " placeholder="Search Amazon"></input>
       <button className="bg-dark-orange rounded-r-md hover:cursor-pointer"><i className="fa-solid fa-magnifying-glass text-navy-blue p-3 text-lg"></i></button>
      </form>
-
+     
+     {/* right section */}
      <div className="col-span-3 flex justify-between items-center">
       <h1 className="text-[13px] border border-transparent hover:border-white hover:cursor-pointer p-2">EN <i className="fa-solid fa-caret-down text-xs"></i></h1>
       <p className="text-center border border-transparent hover:border-white hover:cursor-pointer p-2">Hello, sign in 
@@ -34,10 +38,18 @@ const Header = () => {
       <p className="text-center border border-transparent hover:border-white hover:cursor-pointer p-2">Returns 
         <span className="block text-[13px] font-bold">& Orders</span>
       </p>
-      <div className="border border-transparent hover:border-white hover:cursor-pointer p-2">
-      <i className="fa-solid fa-cart-shopping text-xl mr-1"></i>
-      <span>cart</span>
+      <div className="flex items-end border border-transparent hover:border-white hover:cursor-pointer px-2 py-3">
+       
+        <Link to="/cart">
+         <div className="flex flex-col leading-2.5">
+         <span className="text-center text-[10px] text-yellow-light">{totalItems}</span>
+         <i className="fa-solid fa-cart-shopping text-xl mr-1 "></i>
+          </div>
+         </Link>
+         <p className="text-xs">Cart</p>
+      
       </div>
+      
 
      </div>
       

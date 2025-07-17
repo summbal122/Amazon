@@ -9,7 +9,7 @@ const {categoryName} = useParams();
 const categories = categoryMap[categoryName] || [categoryName]; // fallback to single category
  const [selectedCategories, setSelectedCategories] = useState(categories);
 
-   // ✅ Sync selectedCategories when categoryName changes
+   // Sync selectedCategories when categoryName changes
   useEffect(() => {
     setSelectedCategories(categories);
   }, [categoryName]);
@@ -37,7 +37,7 @@ const handleProducts = (subCategory) => {
      </button>
     ))}
       </div>
-
+        {/* products */}
         <ProductCard products = {products} />
       </div>
       

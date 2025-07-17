@@ -1,5 +1,17 @@
-
+import { addCartItem } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
 const ProductCard = ({products}) => {
+  const dispatch = useDispatch();
+
+ const handleAddItems = (product) => {
+  const selectedItem = {
+    id: product.id,
+    title: product.title,
+    image: product.images[0],
+    price: product.price,
+  };
+  dispatch(addCartItem(selectedItem));
+};
   return (
       <div>
       {products.length === 0 ? (
@@ -22,7 +34,9 @@ const ProductCard = ({products}) => {
               ${product.price || "No Price"}
               </p>
               <p className="text-xs font-medium">Ships to Pakistan</p>
-              <button className="bg-yellow-light font-medium text-xs px-4 py-2 rounded-2xl hover:cursor-pointer hover:bg-yellow-400">Add to Cart</button>
+              <button onClick={()=> {
+                handleAddItems(product);
+              }} className="bg-yellow-light font-medium text-xs px-4 py-2 rounded-2xl hover:cursor-pointer hover:bg-yellow-400">Add to Cart</button>
             </div>
             </div>
           ))}
