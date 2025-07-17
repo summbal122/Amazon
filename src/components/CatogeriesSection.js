@@ -44,8 +44,8 @@ const CatogeriesSection = () => {
       </div>
       </Link>
 
-       {/* Groceries */}
-       <Link to="/products/category/groceries">
+       {/* kitchen */}
+       <Link to="/products/category/kitchen">
           <div className="bg-white px-5 py-3 h-100">
         <h1 className="font-bold text-xl mb-2">Top categories in Kitchen appliances</h1>
           <div>
@@ -188,6 +188,36 @@ const CatogeriesSection = () => {
         <span className="text-xs text-blue-600">Shop gaming</span>
       </div>
        </Link>
+    {/* groceries */}
+       <Link to="/products/category/vehicle">
+          <div className="bg-white px-5 py-3 h-100">
+        <h1 className="font-bold text-xl mb-2">Top categories in Kitchen appliances</h1>
+          <div>
+            <img alt="" src={IMG_URL_TWO + "BAU2024Aug/Backpack_2x._SY232_CB566100767_.jpg"} />
+            <span className="text-xs">Cooker</span>
+          </div>
+       
+        <div className="grid grid-cols-3 gap-2">
+          <div>
+            <img alt="" src={IMG_URL_TWO + "BAU2024Aug/TravelBag_2x._SY232_CB566100767_.jpg" }/>
+            <span className="text-xs">Coffee</span>
+          </div>
+
+           <div>
+           <img  alt="" src={IMG_URL_TWO + "BAU2024Aug/Accessories_2x._SY232_CB566100767_.jpg" }/>
+            <span className="text-xs">Pots and Pans</span>
+          </div>
+
+           <div>
+            <img alt="" src={IMG_URL_TWO + "BAU2024Aug/Handbags_2x._SY232_CB566100767_.jpg"} />
+            <span className="text-xs">Kettles</span>
+          </div>
+
+        </div>
+        <span className="text-xs text-blue-600">Shop gaming</span>
+      </div>
+       </Link>
+
 
 
    

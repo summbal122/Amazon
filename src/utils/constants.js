@@ -5,9 +5,11 @@ export const IMG_URL_STORE = "https://images-na.ssl-images-amazon.com/images/G/0
 export const categoryMap = {
   devices: ["laptops", "smartphones", "tablets", "mobile-accessories"],
   beauty: ["beauty", "fragrances", "skin-care"],
-  fashion: ["mens-shirts", "womens-dresses", "womens-shoes", "mens-shoes"],
+  fashion: ["mens-shirts", "womens-dresses", "womens-shoes", "mens-shoes", "tops"],
   home: ["home-decoration", "furniture"],
   watches: ["mens-watches", "womens-watches"],
-  bags: ["womens-bags"]
+  bags: ["womens-bags", "womens-jewellery"],
+  kitchen : ["kitchen-accessories"],
+  vehicle: ["motorcycle", "vehicle"]
 };
 export const BEST_SELLER_URL = (id) => `https://m.media-amazon.com/images/I/${id}L._AC_SY400_.jpg`;

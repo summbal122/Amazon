@@ -2,24 +2,41 @@ import useFetchProducts from "../utils/useFetchProducts";
 import { useParams } from "react-router";
 import { categoryMap } from "../utils/constants";
 import ProductCard from "./ProductCard";
+import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
 const ProductsPage = () => {
 const {categoryName} = useParams();
 const categories = categoryMap[categoryName] || [categoryName]; // fallback to single category
-const products = useFetchProducts(categories);
+ const [selectedCategories, setSelectedCategories] = useState(categories);
+
+   // ✅ Sync selectedCategories when categoryName changes
+  useEffect(() => {
+    setSelectedCategories(categories);
+  }, [categoryName]);
+useFetchProducts(selectedCategories); 
+const products = useSelector((store) => store.products.products)
+const handleProducts = (subCategory) => {
+  setSelectedCategories([subCategory]);
+};
   return (
     <div className="p-6 bg-white">
       <h2 className="text-lg mb-6">Results for <span className="text-sm text-red-600">"{categoryName}" </span></h2>
       <div className="flex gap-6">
         {/* Sidebar with subcategories */}
         <div className="w-2/12 space-y-2">
-          {categories.map((subCat, index) => (
-            <button
-              key={index}
-              className="w-full text-left px-4 py-2 bg-gray-light/50 border border-transparent hover:border hover:border-black hover:cursor-pointer rounded font-medium text-sm" >
-              {subCat.replace("-", " ")}
-            </button>
-          ))}
-        </div>
+        <button onClick={()=> setSelectedCategories(categories)}
+        className="w-full text-left px-4 py-2 bg-gray-light/50 border border-transparent hover:border hover:border-black hover:cursor-pointer rounded font-medium text-sm">
+          All</button>
+         {categories.map((subCat, index) => (
+     <button
+      onClick={() => handleProducts(subCat)}
+      key={index}
+      className="w-full text-left px-4 py-2 bg-gray-light/50 border border-transparent hover:border hover:border-black hover:cursor-pointer rounded font-medium text-sm"
+      >
+     {subCat.replace("-", " ")}
+     </button>
+    ))}
+      </div>
 
         <ProductCard products = {products} />
       </div>

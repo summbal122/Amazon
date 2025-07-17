@@ -1,6 +1,8 @@
   import { useEffect, useState } from "react";
-
+import { useDispatch } from "react-redux";
+import { addProducts } from "./productsSlice";
   const useFetchProducts = (categories = []) => {
+    const dispatch = useDispatch();
   const [products, setProducts] = useState([]);
    useEffect( () => {
     const fetchProducts = async () => {
@@ -12,12 +14,10 @@
         })
       );
       const combined = results.flat();
-  
-     setProducts(combined);
-     console.log(combined)
+       dispatch(addProducts(combined));
      }
     fetchProducts();
-   }, [categories]);
+   }, [categories, dispatch]);
    return products;
   
   };

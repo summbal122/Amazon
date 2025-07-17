@@ -5,14 +5,14 @@ import { RouterProvider } from "react-router"
 import ProductsPage from "./src/components/ProductsPage"
 import MainSection from "./src/components/MainSection"
 import Footer from "./src/components/Footer"
-import CatogeriesSection from "./src/components/CatogeriesSection"
+import { Provider } from "react-redux"
+import appStore from "./src/utils/appStore"
 const AppLayout = () => {
   return ( 
     <>
     <Header/>
     <Body/>
     <Footer/>
-    
     </>
   )
 };
@@ -37,8 +37,9 @@ const appRouter = createBrowserRouter ([
 
 const App = () => {
   return (
-
+<Provider store ={appStore}>
     <RouterProvider router = {appRouter} />
+  </Provider>
 
   )
 }

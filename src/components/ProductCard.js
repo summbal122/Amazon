@@ -3,7 +3,7 @@ const ProductCard = ({products}) => {
   return (
       <div>
       {products.length === 0 ? (
-        <p>Loading or no products found...</p>
+        <p>no products found...</p>
       ) : (
         <div className="grid grid-cols-4 gap-4">
           {products.map((product) => (
