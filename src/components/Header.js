@@ -1,7 +1,15 @@
-import { Link } from "react-router"
+import { Link, useNavigate } from "react-router"
 import { useSelector } from "react-redux"
+import { useState } from "react";
 const Header = () => {
-  const cartItems = useSelector((store) => store.cart.cartItems);
+  const navigate = useNavigate();
+  const [query , setQuery] = useState("");
+  const handleSearch = (e)=> {
+    e.preventDefault();
+   navigate(`/search?search=${query}`)
+   setQuery("");
+  } 
+   const cartItems = useSelector((store) => store.cart.cartItems);
    const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   return (
     <div id="top-section" className="bg-navy-blue w-full grid grid-cols-12 text-white py-2 px-5 font-medium gap-4 text-xs">
@@ -23,10 +31,16 @@ const Header = () => {
      </div>
      
      {/* Search Section */}
-     <form className="col-span-7 flex items-center">
+     <form onSubmit={handleSearch} className="col-span-7 flex items-center">
       <button className="bg-gray-light text-gray-600 p-3 border-1 border-gray-light rounded-l-md">All <i className="ml-1 fa-solid fa-caret-down text-xs hover:cursor-pointer"></i></button>
-      <input className="flex-1 bg-white text-gray-950 p-3 text-[13px] outline-dark-orange " placeholder="Search Amazon"></input>
-      <button className="bg-dark-orange rounded-r-md hover:cursor-pointer"><i className="fa-solid fa-magnifying-glass text-navy-blue p-3 text-lg"></i></button>
+      <input
+       name = "search"
+       value ={query}
+       onChange={(e)=> {
+       setQuery(e.target.value);
+      }} className="flex-1 bg-white text-gray-950 p-3 text-[13px] outline-dark-orange " placeholder="Search Amazon"></input>
+      <button  className="bg-dark-orange rounded-r-md hover:cursor-pointer"><i className="fa-solid fa-magnifying-glass text-navy-blue p-3 text-lg"></i></button>
+      
      </form>
      
      {/* right section */}

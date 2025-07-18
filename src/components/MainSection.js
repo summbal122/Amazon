@@ -16,13 +16,12 @@ const MainSection = () => {
       const fetchProducts = async () => {
         const data = await fetch('https://dummyjson.com/products/category/smartphones');
        const json = await data.json();
-       console.log(json.products)
-       console.log(json);
       }  
       fetchProducts();
      }, [])
   return (
     <div>
+
     <div  className="relative h-screen w-screen">
      <div className="relative w-full">
     <div

@@ -8,6 +8,7 @@ import Footer from "./src/components/Footer"
 import { Provider } from "react-redux"
 import appStore from "./src/utils/appStore"
 import Cart from "./src/components/Cart"
+import SearchProducts from "./src/components/searchProducts"
 const AppLayout = () => {
   return ( 
     <>
@@ -34,7 +35,11 @@ const appRouter = createBrowserRouter ([
       {
       path: "/cart", 
       element: <Cart/>
-      }
+      }, 
+     {
+      path : "/search",
+      element: <SearchProducts/>
+     },
     ]
   }
 ])

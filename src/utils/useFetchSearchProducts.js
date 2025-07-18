@@ -1,0 +1,26 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addSearchedProducts } from "./searchSlice";
+const useFetchSearchProducts = (query)  => {
+  const dispatch = useDispatch();
+  useEffect(()=> {
+  const fetchSearchedProducts = async ()=> {
+       try {
+        // 1. First try normal search
+        let res = await fetch(`https://dummyjson.com/products/search?q=${query}`);
+        let json = await res.json();
+        if (json.products.length === 0) {
+          // 2. If no results, try category endpoint
+          res = await fetch(`https://dummyjson.com/products/category/${query}`);
+          json = await res.json();
+        }
+        dispatch(addSearchedProducts(json.products || []));
+      } catch (err) {
+        console.error("Failed to fetch:", err);
+        dispatch(addSearchedProducts([]));
+      }
+    };
+     if (query) fetchSearchedProducts();
+    },[query])
+  }
+  export default useFetchSearchProducts;
