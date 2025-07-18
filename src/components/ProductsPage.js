@@ -21,7 +21,7 @@ const handleProducts = (subCategory) => {
   return (
     <div className="p-6 bg-white">
       <h2 className="text-lg mb-6">Results for <span className="text-sm text-red-600">"{categoryName}" </span></h2>
-      <div className="flex gap-6">
+      <div className="flex border flex-col lg:flex-row gap-6">
         {/* Sidebar with subcategories */}
         <div className="w-2/12 space-y-2">
         <button onClick={()=> setSelectedCategories(categories)}

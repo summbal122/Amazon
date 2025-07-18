@@ -21,7 +21,6 @@ const MainSection = () => {
      }, [])
   return (
     <div>
-
     <div  className="relative h-screen w-screen">
      <div className="relative w-full">
     <div
@@ -29,27 +28,23 @@ const MainSection = () => {
     style={{ backgroundImage: `url(${images[currentIndex]})` }}>
     {/* Gradient Overlay */}
     <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-white to-transparent" />
-
     <img
       onClick={handlePreviousImg}
       src={chevron[0]}
-      className="w-20 absolute left-5 top-24 hover:cursor-pointer"
+      className="w-20 2xl:w-32 absolute left-5 top-1/4 hover:cursor-pointer"
     />
     <img
       onClick={handleNextImg}
       src={chevron[1]}
-      className="w-20 absolute right-5 top-24 cursor-pointer"
+      className="w-20 2xl:w-32 absolute right-5 top-1/4 cursor-pointer"
     />
-  </div>
-
-</div>
-      
-     
+   </div>
+   </div>
      
     </div>
-     <div className="px-10 space-y-8 ">
+     <div className="px-3 lg:px-10 space-y-8 ">
       <CatogeriesSection/>
-     <BestSellersSection/>
+      <BestSellersSection/>
      </div>
    
 

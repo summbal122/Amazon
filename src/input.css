@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @theme {
   --color-navy-blue: #131921;
   --color-navy-light: #222f3e ;
@@ -7,4 +8,6 @@
   --color-dark-orange:#febd68;
   --color-navy-lighter:#37475a;
   --color-yellow-light:#ffd812;
-}
+} 
+
+
