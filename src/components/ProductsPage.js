@@ -21,17 +21,17 @@ const handleProducts = (subCategory) => {
   return (
     <div className="p-6 bg-white">
       <h2 className="text-lg mb-6">Results for <span className="text-sm text-red-600">"{categoryName}" </span></h2>
-      <div className="flex border flex-col lg:flex-row gap-6">
+      <div className="flex flex-col lg:flex-row gap-6">
         {/* Sidebar with subcategories */}
-        <div className="w-2/12 space-y-2">
+        <div className="lg:w-2/12  space-x-3 space-y-2">
         <button onClick={()=> setSelectedCategories(categories)}
-        className="w-full text-left px-4 py-2 bg-gray-light/50 border border-transparent hover:border hover:border-black hover:cursor-pointer rounded font-medium text-sm">
+        className="lg:w-full text-left px-4 py-2 bg-gray-light/50 border border-transparent hover:border hover:border-black hover:cursor-pointer rounded font-medium text-sm">
           All</button>
          {categories.map((subCat, index) => (
      <button
       onClick={() => handleProducts(subCat)}
       key={index}
-      className="w-full text-left px-4 py-2 bg-gray-light/50 border border-transparent hover:border hover:border-black hover:cursor-pointer rounded font-medium text-sm"
+      className="lg:w-full text-left px-4 py-2 bg-gray-light/50 border border-transparent hover:border hover:border-black hover:cursor-pointer rounded font-medium text-sm"
       >
      {subCat.replace("-", " ")}
      </button>

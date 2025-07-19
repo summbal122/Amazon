@@ -6,7 +6,7 @@ const CatogeriesSection = () => {
 
       {/* Gaming */}
       <Link to="/products/category/devices"> 
-      <div className="bg-white p-4 h-95 2xl:h-140 flex flex-col justify-between">
+      <div className="bg-white p-4 h-80 xl:h-95 2xl:h-140 flex flex-col justify-between">
         <h1 className="font-bold">Get your game on</h1>
         <img alt="" src={IMG_URL_TWO+ "Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg" } />
         <span className="text-xs 2xl:text-lg  text-blue-600">Shop gaming</span>
@@ -15,7 +15,7 @@ const CatogeriesSection = () => {
       
       {/* home */}
        <Link to="/products/category/home"> 
-       <div className="bg-white p-4 h-95 2xl:h-140 flex flex-col justify-between">
+       <div className="bg-white p-4 h-80 xl:h-95 2xl:h-140 flex flex-col justify-between">
         <h1 className="font-bold  mb-2">Shop for your home essentials</h1> 
         <div className="grid grid-cols-2 gap-4 text-xs 2xl:text-lg ">
 
@@ -46,7 +46,7 @@ const CatogeriesSection = () => {
 
        {/* kitchen */}
        <Link to="/products/category/kitchen">
-          <div className="bg-white h-95 2xl:h-140 px-5 py-3 flex flex-col justify-between">
+          <div className="bg-white h-80 xl:h-95 2xl:h-140 px-5 py-3 flex flex-col justify-between">
         <h1 className="font-bold  mb-2">Kitchen appliances</h1>
           <div>
             <img alt="" src={IMG_URL + "313wAT6Iy2L._SY320_.jpg"} />
@@ -77,7 +77,7 @@ const CatogeriesSection = () => {
     
        {/* fashion */}
        <Link to="/products/category/fashion">
-       <div className="bg-white px-5 py-3 h-95 2xl:h-140 flex flex-col justify-between">
+       <div className="bg-white px-5 py-3 h-80 xl:h-95 2xl:h-140 flex flex-col justify-between">
         <h1 className="font-bold  mb-2">Fashion trends you like</h1>
         <div className="grid grid-cols-2 gap-2 text-xs 2xl:text-lg"> 
           <div>
@@ -104,7 +104,7 @@ const CatogeriesSection = () => {
 
     {/* Watches */}
      <Link to="/products/category/watches">
-       <div className="bg-white px-5 py-3 h-95 2xl:h-140 flex flex-col justify-between">
+       <div className="bg-white px-5 py-3 h-80 xl:h-95 2xl:h-140 flex flex-col justify-between">
         <h1 className="font-bold mb-2">Fashion trends you like</h1>
         <div className="grid grid-cols-2 gap-2 text-xs 2xl:text-lg"> 
           <div>
@@ -131,7 +131,7 @@ const CatogeriesSection = () => {
 
     {/* Beauty */}
        <Link to="/products/category/beauty">
-          <div className="bg-white px-5 py-3 h-95 2xl:h-140 flex flex-col justify-between">
+          <div className="bg-white px-5 py-3 h-80 xl:h-95 2xl:h-140 flex flex-col justify-between">
         <h1 className="font-bold mb-2">Kitchen appliances</h1>
           <div>
             <img alt="" src={IMG_URL_TWO + "DskBTFQuadCards/Fuji_BTF_Quad_Cards_2x_Make-up._SY232_CB558654384_.jpg"} />
@@ -161,7 +161,7 @@ const CatogeriesSection = () => {
 
    {/* Bags */}
        <Link to="/products/category/bags">
-          <div className="bg-white px-5 py-3 h-95 2xl:h-140 flex flex-col justify-between ">
+          <div className="bg-white px-5 py-3 h-80 xl:h-95 2xl:h-140 flex flex-col justify-between ">
         <h1 className="font-bold mb-2"> Kitchen appliances</h1>
           <div>
             <img alt="" src={IMG_URL_TWO + "BAU2024Aug/Backpack_2x._SY232_CB566100767_.jpg"} />
@@ -190,7 +190,7 @@ const CatogeriesSection = () => {
        </Link>
     {/* groceries */}
        <Link to="/products/category/vehicle">
-          <div className="bg-white px-5 py-3 h-95 2xl:h-140 flex flex-col justify-between ">
+          <div className="bg-white px-5 py-3 h-80 xl:h-95 2xl:h-140 flex flex-col justify-between ">
         <h1 className="font-bold mb-2">Kitchen appliances</h1>
           <div>
             <img alt="" src={IMG_URL_TWO + "BAU2024Aug/Backpack_2x._SY232_CB566100767_.jpg"} />

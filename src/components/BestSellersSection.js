@@ -7,10 +7,10 @@ const BestSellersSection = () => {
       <div className="flex flex-col gap-8"> 
       {Object.values(BEST_SELLERS).map((category, index) => (
         <div className="bg-white p-6" key={index}>
-          <h1 className="font-bold text-xl mb-6">{category.title}</h1>
+          <h1 className="font-bold md:text-xl mb-6">{category.title}</h1>
           <div className="overflow-x-scroll flex gap-6">
             { category.id.map((id,i) => (
-              <img className="w-72 h-45" key={i} src={BEST_SELLER_URL(id)}/>
+              <img className="w-30 h-40 md:w-72 md:h-45" key={i} src={BEST_SELLER_URL(id)}/>
             ))
             }
            </div>

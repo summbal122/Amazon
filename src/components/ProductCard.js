@@ -17,7 +17,7 @@ const ProductCard = ({products}) => {
       {products.length === 0 ? (
         <p>no products found...</p>
       ) : (
-        <div className="grid md:grid-cols-4  2xl:grid-cols-5 gap-4">
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4">
           {products.map((product) => (
             <div
               key={product.id}
