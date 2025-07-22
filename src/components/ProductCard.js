@@ -20,6 +20,7 @@ const ProductCard = ({products}) => {
         <div className="grid md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4">
           {products.map((product) => (
             <div
+             data-testid="product-card"
               key={product.id}
               className="rounded p-4 shadow transition bg-gray-light/50" >
               <img

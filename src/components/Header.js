@@ -1,3 +1,4 @@
+
 import { Link, useNavigate } from "react-router"
 import { useSelector } from "react-redux"
 import { useState } from "react";
@@ -22,7 +23,7 @@ const Header = () => {
       <div className="hidden lg:block">
       <div className="flex items-center gap-2 text-sm 2xl:text-2xl border border-transparent hover:border-white hover:cursor-pointer p-2">
       <i className="fa-solid fa-location-dot xl:text-lg"></i>
-      <div >
+      <div>
       <p className="text-gray-dark leading-tight text-[10px] xl:text-xs">
         Deliver to </p>
       <span className="block text-white font-bold text-xs xl:text-md">Pakistan</span>
@@ -35,7 +36,7 @@ const Header = () => {
      <div className="flex items-center text-lg space-x-3 ">
        <div className="flex ml-auto">
         <Link to="/cart">
-         <div className="flex flex-col leading-2.5">
+         <div data-testid="cart" className="flex flex-col leading-2.5">
          <span className="text-center text-[10px]  text-yellow-light">{totalItems}</span>
          <i className="fa-solid fa-cart-shopping mb-1 "></i>
           </div>

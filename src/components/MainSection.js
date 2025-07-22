@@ -1,7 +1,6 @@
 import { images , chevron} from "../data";
 import { useState, useEffect } from "react";
 import CatogeriesSection from "./CatogeriesSection";
-import { useState} from "react";
 import BestSellersSection from "./BestSellersSection";
 const MainSection = () => {
 
