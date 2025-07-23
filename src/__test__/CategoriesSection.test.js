@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router";
 import "@testing-library/jest-dom";
 import CategoriesSection from "../components/CatogeriesSection"
 
-test("find total categories", ()=> {
+it("renders categories", ()=> {
   render(
     <BrowserRouter> 
     <CategoriesSection/>

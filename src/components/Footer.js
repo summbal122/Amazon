@@ -12,7 +12,7 @@ const Footer = () => {
         <div className=" grid grid-cols-3 md:grid-cols-7 gap-x-8 gap-y-4 w-11/12 lg:w-9/12 mb-4"> 
         {amazonFooterLinks.map((link, index) => { 
           return (
-          <div className="text-xs 2xl:text-lg hover:underline hover:cursor-pointer" key={index}>
+          <div data-testid ="about-links" className="text-xs 2xl:text-lg hover:underline hover:cursor-pointer" key={index}>
           <h1>{link.title}</h1>
           <span className="text-gray-dark">{link.description} </span> </div>  )
         })}

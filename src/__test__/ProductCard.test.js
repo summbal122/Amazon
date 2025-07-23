@@ -1,27 +1,28 @@
-import "@testing-library/jest-dom"
-import { render, screen } from "@testing-library/react"
-import { Provider } from "react-redux"
-import ProductCard from "../components/ProductCard"
-import appStore from "../utils/appStore"
-import { dummyProducts } from "../utils/dummyData"
+import "@testing-library/jest-dom";
+import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
+import ProductCard from "../components/ProductCard";
+import appStore from "../utils/appStore";
+import { dummyProducts } from "../utils/dummyData";
 
+describe("ProductCard Component", () => {
+  const renderProductCard = () =>
+    render(
+      <Provider store={appStore}>
+        <ProductCard products={dummyProducts} />
+      </Provider>
+    );
 
-test('find title of the product', ()=> {
-  render(
-    <Provider store={appStore}>
-      <ProductCard products={dummyProducts}/>
-    </Provider>
-  )
-   dummyProducts.forEach(product => {
-   expect(screen.getByText(product.title)).toBeInTheDocument();
+  it("renders all product titles", () => {
+    renderProductCard();
+    dummyProducts.forEach(product => {
+      expect(screen.getByText(product.title)).toBeInTheDocument();
+    });
   });
-})
 
-test('find total products on the page', ()=> {
-  render(
-    <Provider store={appStore}>
-      <ProductCard products={dummyProducts}/>
-    </Provider>
-  )
-   expect(screen.getAllByTestId('product-card').length).toBe(3);
-})
+  it("renders the correct number of product cards", () => {
+    renderProductCard();
+    const cards = screen.getAllByTestId("product-card");
+    expect(cards.length).toBe(dummyProducts.length);
+  });
+});

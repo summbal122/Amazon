@@ -1,29 +1,29 @@
-
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import appStore from "../utils/appStore"
+import appStore from "../utils/appStore";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router";
-import Header from "../components/Header"
+import { BrowserRouter } from "react-router-dom";
+import Header from "../components/Header";
 
-test('find total buttons', ()=>{
-  render(
-    <Provider store= {appStore}>
-    <BrowserRouter>
-       <Header/>
-    </BrowserRouter>
-      </Provider>
-  )
-  expect(screen.getAllByRole("button").length).toBe(2);
-})
-test('find cart', ()=>{
+describe("Header Component", () => {
+  const renderHeader = () =>
     render(
-    <Provider store= {appStore}>
-    <BrowserRouter>
-       <Header/>
-    </BrowserRouter>
+      <Provider store={appStore}>
+        <BrowserRouter>
+          <Header />
+        </BrowserRouter>
       </Provider>
-  )
-  expect(screen.getByTestId("cart").toBeInTheDocument)
+    );
 
-})
+  it("renders exactly 2 buttons", () => {
+    renderHeader();
+    const buttons = screen.getAllByRole("button");
+    expect(buttons.length).toBe(2);
+  });
+
+  it("renders the cart element", () => {
+    renderHeader();
+    const cart = screen.getByTestId("cart");
+    expect(cart).toBeInTheDocument();
+  });
+});
