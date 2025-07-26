@@ -8,7 +8,7 @@ This is a fully responsive Amazon-like e-commerce web app built with **React**, 
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **React** – Frontend library
 - **Redux Toolkit** – State management (Cart, Products)
@@ -29,7 +29,7 @@ This is a fully responsive Amazon-like e-commerce web app built with **React**, 
 
 ---
 
-## 📦 Getting Started
+##  Getting Started
 
 Clone the repo:
 
@@ -39,21 +39,19 @@ cd Amazon
 ```
 ## 📸 Screenshots
 
-> Add your screenshots to a `screenshots/` folder in your project root and reference them below.
-
 ### Home Page
-![Home Page](![alt text](image.png))
-![Home Page](![alt text](image-1.png))
+![alt text](image.png)
+![alt text](image-1.png)
 
 
 ### Product Listing Page
-![Product Page](![alt text](image-2.png))
+![alt text](image-2.png)
 
 
 ### Cart Page
-![Cart Page](![alt text](image-3.png))
+![alt text](image-3.png)
 
 ### Footer
-![Footer](![alt text](image-4.png))
+![alt text](image-4.png)
 
 
