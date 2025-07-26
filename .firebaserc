@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "fir-16fc3"
-  }
+    "default": "fir-16fc3",
+    "fir-d25e5": "fir-d25e5"
+  },
+  "targets": {},
+  "etags": {}
 }

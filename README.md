@@ -4,7 +4,7 @@ This is a fully responsive Amazon-like e-commerce web app built with **React**, 
 
 ## 🚀 Live Demo
 
-👉 [\[Add your live site link here\]](https://fir-16fc3.web.app)
+👉 [\[Add your live site link here\]](https://fir-d25e5.web.app/)
 
 ---
 
