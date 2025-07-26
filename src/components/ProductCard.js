@@ -14,9 +14,6 @@ const ProductCard = ({products}) => {
 };
   return (
       <div>
-      {products.length === 0 ? (
-        <p>no products found...</p>
-      ) : (
         <div className="grid md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4">
           {products.map((product) => (
             <div
@@ -26,7 +23,7 @@ const ProductCard = ({products}) => {
               <img
                  src={product.images[0]}
                 alt={product.title}
-                className="w-full h-48 object-contain mb-2"
+                className="w-full h-48 2xl:h-60 object-contain mb-2"
               />
               <h3 className="text-md font-light">{product.title}</h3>
               <div className="space-y-2"> 
@@ -42,7 +39,6 @@ const ProductCard = ({products}) => {
             </div>
           ))}
         </div>
-      )}
       </div>
   )
 }

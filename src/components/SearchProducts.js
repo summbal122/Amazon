@@ -7,7 +7,6 @@ const SearchProducts = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("search").toLowerCase();
   useFetchSearchProducts(query);
-  console.log(query);
   const products = useSelector((store)=> store.search.searchedProducts);
 
   return (
