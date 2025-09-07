@@ -28,20 +28,17 @@ const MainSection = () => {
     backgroundImage: `url(${images[currentIndex]})`,
     backgroundSize: "cover", 
     backgroundPosition: "center",
-  }}
->
+  }}>
     {/* Gradient Overlay */}
     <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-white to-transparent" />
     <img
       onClick={handlePreviousImg}
       src={chevron[0]}
-      className="w-10 md:w-20 2xl:w-32 absolute left-5 top-1/4 hover:cursor-pointer"
-    />
+      className="w-10 md:w-20 2xl:w-32 absolute left-5 top-1/4 hover:cursor-pointer" />
     <img
       onClick={handleNextImg}
       src={chevron[1]}
-      className="w-10 md:w-20 2xl:w-32 absolute right-5 top-1/4 cursor-pointer"
-    />
+      className="w-10 md:w-20 2xl:w-32 absolute right-5 top-1/4 cursor-pointer" />
    </div>
    </div>
      
@@ -50,8 +47,6 @@ const MainSection = () => {
       <CatogeriesSection/>
       <BestSellersSection/>
      </div>
-   
-
     </div>
   );
 };

@@ -1,5 +1,4 @@
 export const data = ["Today's Deals", "Registry", "Prime Video", "Gift Cards", "Customer Service", "Sell"];
-
 export const images = [
   'https://m.media-amazon.com/images/I/619geyiQI5L._SX3000_.jpg',
   'https://m.media-amazon.com/images/I/71qcoYgEhzL._SX3000_.jpg',

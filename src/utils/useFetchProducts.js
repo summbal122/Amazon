@@ -1,4 +1,4 @@
-  import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProducts } from "./productsSlice";
   const useFetchProducts = (categories = []) => {
@@ -8,9 +8,9 @@ import { addProducts } from "./productsSlice";
     const fetchProducts = async () => {
       const results = await Promise.all (
         categories.map( async (category) => {
-            const data = await fetch(`https://dummyjson.com/products/category/${category}`);
-              const json = await data.json();
-              return json.products || []
+       const data = await fetch(`https://dummyjson.com/products/category/${category}`);
+          const json = await data.json();
+          return json.products || []
         })
       );
       const combined = results.flat();

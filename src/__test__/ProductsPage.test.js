@@ -7,8 +7,6 @@ import ProductsPage from "../components/ProductsPage";
 import productsReducer from "../utils/productsSlice";
 import { dummyProducts } from "../utils/dummyData";
 
-
-
 jest.mock("../utils/useFetchProducts", () => jest.fn());
 jest.mock("../components/ProductCard", () => ({ products }) => (
   <div data-testid="product-card">

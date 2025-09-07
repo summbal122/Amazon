@@ -4,7 +4,14 @@ import { incrementQuantity, decrementQuantity, clearItems, removeItem } from "..
 const Cart = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((store) => store.cart.cartItems);
-  const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+ const total =
+  cartItems.length > 0
+    ? cartItems.reduce((sum, item) => {
+   const price = Number(item.price) || 0;   
+        const quantity = Number(item.quantity) || 0; 
+        return sum + price * quantity;
+      }, 0).toFixed(2)
+    : 0;
  
   return (
     <div className="px-1 py-2 lg:px-5 lg:py-4 grid lg:grid-cols-12 gap-5">
@@ -27,7 +34,7 @@ const Cart = () => {
         <span className="font-bold md:text-lg" >${item.price}</span>
         </div>
         <div className="border-3 border-yellow-light inline px-3 py-1 rounded-2xl space-x-4 font-semibold  md:text-sm">
-          {item.quantity === 1 ?
+          {item.quantity === 0 ?
           ( <i onClick={()=> dispatch(removeItem(item.id))} className="fa-regular fa-trash-can hover:cursor-pointer"></i>  )
           : 
           ( <i onClick={()=> dispatch(decrementQuantity(item.id)) } className="fa-solid fa-minus hover:cursor-pointer"></i> )

@@ -10,14 +10,13 @@ const {categoryName} = useParams();
 const categories = categoryMap[categoryName] || [categoryName]; // fallback to single category
  const [selectedCategories, setSelectedCategories] = useState(categories);
 
-   // Sync selectedCategories when categoryName changes
   useEffect(() => {
     setSelectedCategories(categories);
   }, [categoryName]);
-useFetchProducts(selectedCategories); 
-const products = useSelector((store) => store.products.products)
-const handleProducts = (subCategory) => {
-  setSelectedCategories([subCategory]);
+  useFetchProducts(selectedCategories); 
+   const products = useSelector((store) => store.products.products)
+  const handleProducts = (subCategory) => {
+   setSelectedCategories([subCategory]);
 };
   return (
     <div className="p-6 bg-white">
@@ -32,8 +31,7 @@ const handleProducts = (subCategory) => {
      <button
       onClick={() => handleProducts(subCat)}
       key={index}
-      className="lg:w-full text-left px-4 py-2 bg-gray-light/50 border border-transparent hover:border hover:border-black hover:cursor-pointer rounded font-medium text-sm"
-      >
+      className="lg:w-full text-left px-4 py-2 bg-gray-light/50 border border-transparent hover:border hover:border-black hover:cursor-pointer rounded font-medium text-sm">
      {subCat.replace("-", " ")}
      </button>
     ))}

@@ -2,9 +2,9 @@
 
 This is a fully responsive Amazon-like e-commerce web app built with **React**, **Redux**, and **Tailwind CSS**. Products are dynamically fetched and displayed using a **dummy products API**, with category-based filtering and a functional shopping cart.
 
-## 🚀 Live Demo
+##  Live Demo
 
-👉 [\[Add your live site link here\]](https://fir-d25e5.web.app/)
+ [\[Add your live site link here\]](https://fir-d25e5.web.app/)
 
 ---
 
@@ -18,7 +18,7 @@ This is a fully responsive Amazon-like e-commerce web app built with **React**, 
 
 ---
 
-## ✨ Features
+## Features
 
 - Add to cart
 - Quantity control (increment/decrement/remove)
@@ -37,21 +37,21 @@ Clone the repo:
 git clone https://github.com/summbal122/Amazon.git
 cd Amazon
 ```
-## 📸 Screenshots
+## Screenshots
 
 ### Home Page
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](/screenshots/image.png)
+![alt text](/screenshots/image-1.png)
 
 
 ### Product Listing Page
-![alt text](image-2.png)
+![alt text](/screenshots/image-2.png)
 
 
 ### Cart Page
-![alt text](image-3.png)
+![alt text](/screenshots/image-3.png)
 
 ### Footer
-![alt text](image-4.png)
+![alt text](/screenshots/image-4.png)
 
 

@@ -18,7 +18,6 @@ const AppLayout = () => {
     </>
   )
 };
-
 const appRouter = createBrowserRouter ([
   {
     path: "/",
@@ -44,10 +43,9 @@ const appRouter = createBrowserRouter ([
   }
 ])
 
-
 const App = () => {
   return (
-<Provider store ={appStore}>
+  <Provider store ={appStore}>
     <RouterProvider router = {appRouter} />
   </Provider>
 

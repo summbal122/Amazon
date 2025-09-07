@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useSearchParams } from "react-router";
 import ProductCard from "./ProductCard";
 import useFetchSearchProducts from "../utils/useFetchSearchProducts";
